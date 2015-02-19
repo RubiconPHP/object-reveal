@@ -82,7 +82,7 @@ class ObjectReveal
     /**
      * @return \Closure
      */
-    private function getter()
+    protected function getter()
     {
         if (null === static::$getter) {
             static::$getter = function($property) {
@@ -98,7 +98,7 @@ class ObjectReveal
     /**
      * @return \Closure
      */
-    private function setter()
+    protected function setter()
     {
         if (null === static::$setter) {
             static::$setter = function($property, $value) {
@@ -111,7 +111,7 @@ class ObjectReveal
     /**
      * @return \Closure
      */
-    private function caller()
+    protected function caller()
     {
         if (null === static::$caller) {
             static::$caller = function($method, $args) {
